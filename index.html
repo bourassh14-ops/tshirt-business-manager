@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Profit Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Product Cost & Profit Calculator</h1>
+        <p>1 RMB = 1.5 DH | Weight: 0.25kg per piece</p>
+        
+        <div class="controls">
+            <button onclick="addRow()">➕ Add Row</button>
+            <button onclick="exportData()">📊 Export CSV</button>
+            <button onclick="clearData()">🗑️ Clear All</button>
+        </div>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pieces</th>
+                        <th>Price/piece<br>(RMB)</th>
+                        <th>Base Price<br>(RMB)</th>
+                        <th>Base Price<br>(DH)</th>
+                        <th>Weight<br>(KG)</th>
+                        <th>Log Price/KG<br>(RMB)</th>
+                        <th>Log Cost<br>(RMB)</th>
+                        <th>Log Cost<br>(DH)</th>
+                        <th>Total Cost<br>(RMB)</th>
+                        <th>Total Cost<br>(DH)</th>
+                        <th>Sell Price<br>(RMB)</th>
+                        <th>Sell Price<br>(DH)</th>
+                        <th>Profit<br>(RMB)</th>
+                        <th>Profit<br>(DH)</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+                <tfoot id="totalsRow">
+                    <tr>
+                        <td colspan="2"><strong>GRAND TOTALS</strong></td>
+                        <td id="totBaseRmb">-</td>
+                        <td id="totBaseDh">-</td>
+                        <td id="totWeight">-</td>
+                        <td>-</td>
+                        <td id="totLogRmb">-</td>
+                        <td id="totLogDh">-</td>
+                        <td id="totCostRmb">-</td>
+                        <td id="totCostDh">-</td>
+                        <td id="totSellRmb">-</td>
+                        <td id="totSellDh">-</td>
+                        <td id="totProfitRmb">-</td>
+                        <td id="totProfitDh">-</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
